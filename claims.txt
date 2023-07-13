@@ -1,0 +1,125 @@
+/*****************************************************************************
+TITLE: Claims																																
+AUTHOR:   	Kalpit Agrawal
+ROLL NUMBER: 	2101CS34
+Declaration of Authorship
+This txt file, claims.txt, is part of the miniproject of CS209/CS210 at the 
+department of Computer Science and Engg, IIT Patna . 
+*****************************************************************************/
+
+Files:
+==========
+*All the files I submitted, asm.cpp and claims.txt, have my name and student id at the start, along with a declaration of authorship.
+
+The evidence for Assembler including the output files from the 7 test examples has also been uploaded. They are:
+	* test01.asm (3 output files) 
+	* test02.asm (1 output files) 
+	* test03.asm (3 output file)
+	* test04.asm (3 output file)
+	* test05.asm (1 output file)
+	* bubble.asm (3 output file)
+	* fibonacci.asm (3 output file)
+
+All the test files have been tested and work properly.
+
+*My C++ program did not show any errors and warnings when I compiled it with
+g++ -std=c++17 -pedantic .\Assembler.cpp -o Assembler
+
+*The program is compilable with g++ asm.cpp -o asm 
+
+
+=============================
+Program format and structure:
+=============================
+1. The assembler:
+
+    * consistent and sensible formatting with sensible program structure. 
+    * sensible variable, function & type names with explanatory comments.
+    * uses a single routine for both passes.
+    * with five data structures to store respectively labels, literals, errors, data and mnemonic table with expected operands.
+    * detects label and mnemonic erros.
+	* advanced listing file.
+	* assembles test programs.
+	* can implements and demonstrates the instruction SET.
+
+=============================
+Testing:
+=============================
+
+1. The assembler:
+
+I have tested  seven examples shown as below. The errors only occurred in the file test02.asm and test05.asm and the program immediately stopped on the second pass.
+A proper error log file with all the errors raised was produced.
+
+The others were tested without any errors detected and produced three output files, listing file(.lst), 
+error log file(.log ) and machine readable object file(.o), for each example. 
+ 
+
+1)
+#Input: ./asm test01.asm
+#Output: 
+a. test01.lst 
+b. test01.log (without any error messages)
+c. test01.o
+
+2)
+#Input: ./asm test02.asm
+#Output:  
+b. test02.log (with error messages in log file as shown below)
+
+error messages:
+Error: 4: Duplicate Label
+Error: 6: Invalid Operand
+Error: 7: Missing Operand
+Error: 8: Unexpected Operand
+Error: 9: Invalid Operand
+Error: 10: Invalid Label
+Error: 11: Invalid Mnemonic
+Error: 12: Invalid Mnemonic
+
+3)
+#Input: ./asm test03.asm
+#Output: 
+a. test03.lst
+b. test03.log (without any error messages)
+c. test03.o
+
+
+4)
+#Input: ./asm test04.asm
+#Output: 
+a. test04.lst 
+b. test04.log (without any error messages)
+c. test04.o
+
+5)
+#Input: ./asm test05.asm
+#Output:  
+b. test05.log (with error messages in log file as shown below)
+
+error messages:
+Error: 3: Invalid Mnemonic
+Error: 6: Invalid Label
+Error: 8: Invalid Mnemonic
+Error: 10: Missing Operand
+Error: 11: Extra on End of Line
+Error: 13: Missing Operand
+Error: 14: Invalid Mnemonic
+Error: 15: Invalid Mnemonic
+Error: 16: Unexpected Operand
+
+
+6)
+#Input: ./asm bubble.asm
+#Output: 
+a. bubble.lst 
+b. bubble.log (without any error messages)
+c. bubble.o
+
+
+7)
+#Input: ./asm fibonacci.asm
+#Output: 
+a. fibonacci.lst 
+b. fibonacci.log (without any error messages)
+c. fibonacci.o
